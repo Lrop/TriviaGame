@@ -1,4 +1,64 @@
-var trivia = {
+let score = 0;
+var count=30;
+let currentQuestion = 0;
+let questions= [
+{
+    text: "Who does Ricky Marry",
+    answers: ["Lucy", "Rig Driver", "Cheesebrugers"],
+    correct: 1,
+},
+{
+    text: "Who does Ray Do",
+    answers: ["Lucy", "Rig Driver", "Cheesebrugers"],
+    correct: 2,
+
+},
+{
+    text: "Who does Ricky Eat",
+    answers: ["Lucy", "Rig Driver", "Cheesebrugers"],
+    correct: 3,
+
+},
+{
+    text: "Who does Ricky Marry",
+    answers: ["Lucy", "Rig Driver", "Cheesebrugers"],
+    correct: 4,
+
+},
+]
+
+
+$(document).ready(function(){
+    $('.start a').click(function(){
+        $('.start').hide();
+        $('.quiz-section').show();
+        
+    });
+});
+
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+{
+  count=count-1;
+  if (count <= -1)
+  {
+     clearInterval(counter);
+     return;
+     
+  }
+
+ document.getElementById("clock").innerHTML=count ; // watch for spelling
+}
+
+
+
+
+
+
+
+
+/*var trivia = {
     correct: 0,
     incorrect: 0,
     unasnwered: 0,
@@ -59,7 +119,8 @@ trivia.prototype.correctAnswer = function(choice) {
     return choice === this.answers;
 }
 }
-
+*/
+/*
 var startBtn = document.getElementById('startBtn');
 var count=30;
 
@@ -83,6 +144,6 @@ function timer()
     startBtn.style.display = 'none';
 
  }
-
+*/
 
 

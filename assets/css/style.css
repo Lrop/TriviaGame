@@ -1,6 +1,15 @@
 body {
     background-image: url(../images/80spattern.gif);
 }
+.quiz-section  {
+   display: none;
+}
+a:hover {
+    color: black;
+}
+.test {
+    display: none;
+}
 #top-header {
     margin: auto;
     text-align: center;
@@ -57,6 +66,5 @@ hr {
     border-color: black;
 }
 #startBtn {
-    position: absolute;
-   
+    position: relative;
 }
