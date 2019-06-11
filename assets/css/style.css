@@ -53,7 +53,7 @@ a:hover {
     border-color: black;
     box-shadow:0px 0px 6px black;
 }
-.paragraph-question {
+#paragraph-question {
     text-decoration: underline;
 }
 .paragraph-clock {
