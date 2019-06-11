@@ -7,14 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/javascript/app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Pragati+Narrow:700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Pragati+Narrow:700&display=swap" rel="stylesheet">
     <title>Trivia Game</title>
 </head>
 
 <body>
-
     <header id="top-header">
         <p class="paragraph-header">STRANGE TRIVA GAME</p>
     </header>
@@ -22,25 +20,23 @@
     <div class="main-container">
 
         <p class="paragraph-clock">Time Remaing</p>
-        <p class="paragraph-timer">30s</p>
+        <p id="clock">30</p>
+        
+        <button type="button" id="startBtn" onclick="initialize()">PRESS TO BEGIN!</button>
 
         <hr>
 
         <p class="paragraph-question">What is the answer to question one?</p>
 
-        <p class="paragraph-selection" onclick="questionFunction()">.......................</p>
+        <p class="paragraph-selection" onclick="questionFunction()">A .......................</p>
 
-        <p class="paragraph-selection" onclick="questionFunction()">.......................</p>
+        <p class="paragraph-selection" onclick="questionFunction()">B .......................</p>
 
-        <p class="paragraph-selection" onclick="questionFunction()">.......................</p>
- 
-        <p class="paragraph-selection" onclick="questionFunction()">.......................</p>
+        <p class="paragraph-selection" onclick="questionFunction()">C .......................</p>
 
+        <p class="paragraph-selection" onclick="questionFunction()">D .......................</p>
 
     </div>
-
-
-
 </body>
 
 </html>

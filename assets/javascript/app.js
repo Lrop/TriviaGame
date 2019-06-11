@@ -1,4 +1,4 @@
-var trivia = {
+/*var trivia = {
     correct: 0,
     incorrect: 0,
     unasnwered: 0,
@@ -45,4 +45,46 @@ var trivia = {
         questionNine: '46',
         QuestionTen: 'The Dump',
     }
+}*/
+
+/*var c = 200;
+
+function clock() {
+    c = c - 1;
+    if (c < 200) {
+        clock.innerHTML = c;
+        getelementbyId(clock) = c;
+    }
+    if (c < 1) {
+        window.clearInterval(update);
+        console.log(clock);
+    }
 }
+
+update = setInterval('timer', 1000);*/
+var startBtn = document.getElementById('startBtn');
+var count=30;
+
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+{
+  count=count-1;
+  if (count <= -1)
+  {
+     clearInterval(counter);
+     return;
+     
+  }
+
+ document.getElementById("clock").innerHTML=count ; // watch for spelling
+}
+
+ function initialize() {
+
+    startBtn.style.display = 'none';
+
+ }
+
+
+
