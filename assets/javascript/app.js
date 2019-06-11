@@ -1,4 +1,4 @@
-/*var trivia = {
+var trivia = {
     correct: 0,
     incorrect: 0,
     unasnwered: 0,
@@ -45,23 +45,21 @@
         questionNine: '46',
         QuestionTen: 'The Dump',
     }
-}*/
-
-/*var c = 200;
-
-function clock() {
-    c = c - 1;
-    if (c < 200) {
-        clock.innerHTML = c;
-        getelementbyId(clock) = c;
-    }
-    if (c < 1) {
-        window.clearInterval(update);
-        console.log(clock);
-    }
 }
 
-update = setInterval('timer', 1000);*/
+
+
+function trivia (questions, options, answers) {
+    this.questions = questions;
+    this.options  = options;
+    this.answers = answers;
+
+
+trivia.prototype.correctAnswer = function(choice) {
+    return choice === this.answers;
+}
+}
+
 var startBtn = document.getElementById('startBtn');
 var count=30;
 
