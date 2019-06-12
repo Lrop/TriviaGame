@@ -3,12 +3,14 @@ body {
 }
 .quiz-section  {
    display: none;
+   
 }
 a:hover {
     color: black;
 }
 .test {
     display: none;
+    
 }
 #top-header {
     margin: auto;
@@ -67,4 +69,17 @@ hr {
 }
 #startBtn {
     position: relative;
+}
+li {
+    cursor: pointer;
+    text-align: center;
+}
+.highlight  {
+    color: turquoise;
+}
+.ulClass {
+    text-align: center;
+    align-content: center;
+    list-style: none;
+    margin-right: 25px;
 }
