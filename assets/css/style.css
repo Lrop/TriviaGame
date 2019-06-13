@@ -83,3 +83,7 @@ li {
     list-style: none;
     margin-right: 25px;
 }
+.results {
+    font-size: 15px;
+    display: none;
+}

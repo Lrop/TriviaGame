@@ -36,11 +36,14 @@ let questions = [
 //Functions
 
 $(document).ready(function () {
+   // $('.results').hide();
     $('.start a').click(function () {
         $('.start').hide();
+        
+     //   $('.results').show();
         $('.quiz-section').show();
         showQuestion();
-        timer();
+        
     });
 
     $('.quiz-section ul').on("click", 'li' , function () {
@@ -52,7 +55,8 @@ $(document).ready(function () {
     $('.quiz-section a').click(function(e){
         e.preventDefault();
         if($('li.highlight').length) {
-            let guess = $('li.highlight').attr('id');
+            let guess = parseInt($('li.highlight').attr('id'));
+            checkAnswer(guess);
             console.log(guess)
         
         } else {
@@ -77,26 +81,34 @@ function showQuestion() {
 }
 
 
-function showAnswer() {
-    var answer = questions.answer[1];
-    console.log(answer);
-
+//Checking ansers against choices
+function checkAnswer(guess){
+    let question = questions[currentQuestion];
+    if(question.correct === guess) {
+        score++;
+    }
+    currentQuestion++;
+    if(currentQuestion >= questions.length){
+       showResults();
+       $('#clock').hide(); 
+    }else{
+    showQuestion();
+    }
+}
+//Show Results
+function showResults() {
+    $('.quiz-section').hide();
+    $('.results').show();
+    $('.results h4').text("Congrats you scored " + score + " out of 4!");
+  
 
 }
 
-
-
-
-
-
-
-
-
-
-
+//Page reload/ cop out
+function reloadPage(){
+    location.reload(true);
+}
 // Timer
-
-
 
 function timer() {
 
