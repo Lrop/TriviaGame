@@ -8,26 +8,26 @@ let currentQuestion = 0;
 
 let questions = [
     {
-        title: "Who does Ricky Marry?",
-        answers: ["lucy", "rig driver", "cheesebrugers", "crepes"],
-        correct: 0
-    },
-    {
-        title: "Who does Ray Do?",
-        answers: ["lucy", "rig driver", "cheesebrugers", "crepes"],
+        title: "Whats Ricky's father name?",
+        answers: ["ricky", "ray", "cyrus", "randy"],
         correct: 1
-
     },
     {
-        title: "Who does Ricky Eat?",
-        answers: ["lucy", "rig driver", "cheesebrugers", "crepes"],
+        title: "Who's Julians arch nemisis?",
+        answers: ["ricky", "ray", "cyrus", "randy"],
         correct: 2
 
     },
     {
-        title: "Who does Ricky Marry?",
-        answers: ["lucy", "rig driver", "cheesebrugers", "crepes"],
+        title: "Who's Mr. Laheys secret lover?",
+        answers: ["ricky", "ray", "cyrus", "randy"],
         correct: 3
+
+    },
+    {
+        title: "Who does Lucy maryy?",
+        answers: ["ricky", "ray", "cyrus", "randy"],
+        correct: 0
 
     },
 ];
@@ -36,20 +36,16 @@ let questions = [
 //Functions
 
 $(document).ready(function () {
-   // $('.results').hide();
     $('.start a').click(function () {
         $('.start').hide();
-        
-     //   $('.results').show();
         $('.quiz-section').show();
         showQuestion();
-        
     });
 
     $('.quiz-section ul').on("click", 'li' , function () {
         $('.highlight').removeClass('highlight');
         $(this).addClass('highlight');
-
+        
     });
 
     $('.quiz-section a').click(function(e){
@@ -81,7 +77,7 @@ function showQuestion() {
 }
 
 
-//Checking ansers against choices
+//Checking answers against choices
 function checkAnswer(guess){
     let question = questions[currentQuestion];
     if(question.correct === guess) {
@@ -99,7 +95,7 @@ function checkAnswer(guess){
 function showResults() {
     $('.quiz-section').hide();
     $('.results').show();
-    $('.results h4').text("Congrats you scored " + score + " out of 4!");
+    $('.results h3').text("Congrats you scored " + score + " out of 4!");
   
 
 }
@@ -117,7 +113,6 @@ function timer() {
         clearInterval(counter);
         return;
     }
-
     document.getElementById("clock").innerHTML = count;
 }
 

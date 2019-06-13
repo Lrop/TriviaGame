@@ -87,3 +87,18 @@ li {
     font-size: 15px;
     display: none;
 }
+.results h3 {
+    color: red;
+    text-shadow: 2px black;
+}#resetButton {
+    color: black;
+    background-color: blueviolet;
+    font-size: 16px;
+    border-radius: 8px;
+}
+#submitButton {
+    color: white;
+    background-color: white;
+    font-size: 16px;
+    border-radius: 8px;
+}
