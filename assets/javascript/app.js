@@ -48,6 +48,19 @@ $(document).ready(function () {
         $(this).addClass('highlight');
 
     });
+
+    $('.quiz-section a').click(function(e){
+        e.preventDefault();
+        if($('li.highlight').length) {
+            let guess = $('li.highlight').attr('id');
+            console.log(guess)
+        
+        } else {
+            alert('Please selected an option');
+        } 
+
+    });
+
 });
 
 // Shows the first question
