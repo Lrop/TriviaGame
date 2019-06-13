@@ -42,22 +42,22 @@ $(document).ready(function () {
         showQuestion();
     });
 
-    $('.quiz-section ul').on("click", 'li' , function () {
-        $('.highlight').removeClass('highlight');
-        $(this).addClass('highlight');
-        
+    $('.quiz-section ul').on("click", 'li', function () { // Adding Highlighted Effect
+        $('.highlight').removeClass('highlight'); //Highlight will stay on choices/too fast too see
+        $(this).addClass('highlight'); //Adds back class when new new answer is selected
+
     });
 
-    $('.quiz-section a').click(function(e){
+    $('.quiz-section a').click(function (e) {
         e.preventDefault();
-        if($('li.highlight').length) {
+        if ($('li.highlight').length) {
             let guess = parseInt($('li.highlight').attr('id'));
             checkAnswer(guess);
             console.log(guess)
-        
+
         } else {
-            alert('Please selected an option');
-        } 
+            alert('Please choose an options!');
+        }
 
     });
 
@@ -68,27 +68,30 @@ $(document).ready(function () {
 function showQuestion() {
     let question = questions[currentQuestion];
     $('#paragraph-question').text(question.title);
-    $('.quiz-section ul').html('');
+    $('.quiz-section ul').html(''); // Clears li's
     console.log(question.title);
+
     for (var i = 0; i < question.answers.length; i++) {
-        $('.quiz-section ul').append("<li id='" + i + "'>" + question.answers[i] + "</li>");
+        $('.quiz-section ul').append("<li id='" + i + "'>" + question.answers[i] + "</li>"); //Appends new questions to the cleared li's
 
     }
 }
 
 
 //Checking answers against choices
-function checkAnswer(guess){
+function checkAnswer(guess) {
     let question = questions[currentQuestion];
-    if(question.correct === guess) {
+    if (question.correct === guess) {
         score++;
+        
+        
     }
     currentQuestion++;
-    if(currentQuestion >= questions.length){
-       showResults();
-       $('#clock').hide(); 
-    }else{
-    showQuestion();
+    if (currentQuestion >= questions.length) {
+        showResults();
+        $('#clock').hide();
+    } else {
+        showQuestion();
     }
 }
 //Show Results
@@ -96,12 +99,12 @@ function showResults() {
     $('.quiz-section').hide();
     $('.results').show();
     $('.results h3').text("Congrats you scored " + score + " out of 4!");
-  
+
 
 }
 
 //Page reload/ cop out
-function reloadPage(){
+function reloadPage() {
     location.reload(true);
 }
 // Timer
