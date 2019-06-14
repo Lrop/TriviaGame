@@ -91,14 +91,15 @@ li {
     color: red;
     text-shadow: 2px black;
 }#resetButton {
-    color: black;
     background-color: blueviolet;
     font-size: 16px;
     border-radius: 8px;
+    font-family: 'Bungee Inline', cursive;
+    color: white
 }
 #submitButton {
-    color: white;
     background-color: white;
     font-size: 16px;
     border-radius: 8px;
+    font-family: 'Bungee Inline', cursive;
 }

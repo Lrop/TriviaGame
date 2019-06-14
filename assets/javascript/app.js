@@ -83,8 +83,7 @@ function checkAnswer(guess) {
     let question = questions[currentQuestion];
     if (question.correct === guess) {
         score++;
-        
-        
+
     }
     currentQuestion++;
     if (currentQuestion >= questions.length) {
@@ -99,8 +98,6 @@ function showResults() {
     $('.quiz-section').hide();
     $('.results').show();
     $('.results h3').text("Congrats you scored " + score + " out of 4!");
-
-
 }
 
 //Page reload/ cop out
